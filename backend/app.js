@@ -14,8 +14,8 @@ const { requestLogger, errorLogger } = require('./middlewares/logger');
 
 const corsOptions = {
   origin: [
-    'https://st.ivanisov.nomoredomains.sbs',
-    'http://st.ivanisov.nomoredomains.sbs',
+    'https://st.ivanisov2b.nomoredomains.sbs',
+    'http://st.ivanisov2b.nomoredomains.sbs',
     'https://localhost:3001',
     'http://localhost:3001',
   ],
