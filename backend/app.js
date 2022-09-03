@@ -14,8 +14,8 @@ const { requestLogger, errorLogger } = require('./middlewares/logger');
 
 const corsOptions = {
   origin: [
-    'https://st.ivanisov2b.nomoredomains.sbs',
-    'http://st.ivanisov2b.nomoredomains.sbs',
+    'https://st.ivanisov.nomoredomains.sbs',
+    'http://st.ivanisov.nomoredomains.sbs',
     'https://localhost:3001',
     'http://localhost:3001',
   ],
@@ -70,7 +70,7 @@ app.use('/users', auth, require('./routes/users'));
 app.use('/cards', auth, require('./routes/cards'));
 
 app.use(errorLogger);
-app.use('*', auth, () => {
+app.use('*', () => {
   throw new NotFoundError('Страница не найдена');
 });
 app.use(errors());
